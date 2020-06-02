@@ -8,6 +8,14 @@
   margin: 0 auto;
   margin-top: 1vh;
   font-family: "Ubuntu", sans-serif;
+
+  h3 {
+    font-family: "Ubuntu", sans-serif;
+    color: darken($accent-color, $amount: 20%);
+    padding: 8px;
+    margin: 5px;
+    font-weight: bold;
+  }
 }
 
 .about-img {
@@ -16,25 +24,24 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   border: none;
 }
 
-
 .about > p {
-    color: darken($secondary-color, $amount: 20%);
-    margin-top: 4px;
-    padding: 14px;
-    font-size: 14px;
-    width: 100%;
+  color: darken($secondary-color, $amount: 20%);
+  margin-top: 5px;
+  padding: 15px;
+  font-size: 14px;
+  width: 100%;
 }
 
-p:nth-child(odd){
-    background-color: darken($accent-color, $amount: 10%);
-    color: $primary-color ;
+p:nth-child(odd) {
+  background-color: darken($accent-color, $amount: 20%);
+  color: $primary-color;
 }
 
-p:nth-child(even){
-    background-color: darken($secondary-color, $amount: 30%);
-    color: $primary-color ;
+p:nth-child(even) {
+  background-color: darken($secondary-color, $amount: 30%);
+  color: $primary-color;
 }

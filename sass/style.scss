@@ -22,14 +22,14 @@ body {
 
 nav .logo a {
   margin-left: 20px;
-  color: darken($accent-color, $amount: 10%);
+  color: darken($accent-color, $amount: 20%);
   text-decoration: none;
   padding: 5px;
   font-size: 20px;
   font-family: "Ubuntu", sans-serif;
 
   &:hover {
-    background-color: darken($accent-color, $amount: 10%);
+    background-color: darken($accent-color, $amount: 20%);
     border-radius: 50px;
     color: $primary-color;
   }
@@ -45,7 +45,7 @@ nav .logo a {
   letter-spacing: 1px;
 
   &:hover {
-    background-color: darken($accent-color, $amount: 10%);
+    background-color: darken($accent-color, $amount: 20%);
     border-radius: 50px;
     color: $primary-color;
   }

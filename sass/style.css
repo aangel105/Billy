@@ -33,7 +33,7 @@ body {
 
 nav .logo a {
   margin-left: 20px;
-  color: #d5c604;
+  color: #a39803;
   text-decoration: none;
   padding: 5px;
   font-size: 20px;
@@ -41,7 +41,7 @@ nav .logo a {
 }
 
 nav .logo a:hover {
-  background-color: #d5c604;
+  background-color: #a39803;
   border-radius: 50px;
   color: black;
 }
@@ -57,7 +57,7 @@ nav .logo a:hover {
 }
 
 .links > a:hover {
-  background-color: #d5c604;
+  background-color: #a39803;
   border-radius: 50px;
   color: black;
 }

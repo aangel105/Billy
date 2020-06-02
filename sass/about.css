@@ -160,26 +160,34 @@ nav .logo a:hover {
   font-family: "Ubuntu", sans-serif;
 }
 
+.about h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: #a39803;
+  padding: 8px;
+  margin: 5px;
+  font-weight: bold;
+}
+
 .about-img {
   background-image: url("../images/about.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   border: none;
 }
 
 .about > p {
   color: #b7b4b4;
-  margin-top: 4px;
-  padding: 14px;
+  margin-top: 5px;
+  padding: 15px;
   font-size: 14px;
   width: 100%;
 }
 
 p:nth-child(odd) {
-  background-color: #d5c604;
+  background-color: #a39803;
   color: black;
 }
 
