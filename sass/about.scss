@@ -1,0 +1,40 @@
+@import "config";
+@import "style";
+
+.about {
+  width: 50vw;
+  height: 90vh;
+  background-color: darken($secondary-color, $amount: 80%);
+  margin: 0 auto;
+  margin-top: 1vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about-img {
+  background-image: url("../images/about.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vh;
+  border: none;
+}
+
+
+.about > p {
+    color: darken($secondary-color, $amount: 20%);
+    margin-top: 4px;
+    padding: 14px;
+    font-size: 14px;
+    width: 100%;
+}
+
+p:nth-child(odd){
+    background-color: darken($accent-color, $amount: 10%);
+    color: $primary-color ;
+}
+
+p:nth-child(even){
+    background-color: darken($secondary-color, $amount: 30%);
+    color: $primary-color ;
+}
