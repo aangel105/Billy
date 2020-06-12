@@ -5,6 +5,13 @@
           box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   overflow: hidden;
   background-image: url("../images/barberia.jpeg");
@@ -153,4 +160,69 @@ nav .logo a:hover {
   background-color: #858080;
   opacity: 0.9;
 }
-/*# sourceMappingURL=style.css.map */
+
+.services {
+  width: 80vw;
+  height: 80vh;
+  background-color: #e9e8e8;
+  margin: 0 auto;
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left-side {
+  background-image: url("../images/service.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  width: 50%;
+  height: 100%;
+}
+
+.right-side {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 6px;
+  margin: 6px;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.service > div > p {
+  font-weight: bolder;
+}
+
+.service:first-child {
+  margin-top: 10px;
+}
+
+.service:nth-child(odd) {
+  background-color: #a39803;
+}
+
+.service:nth-child(even) {
+  background-color: #d0cece;
+}
+/*# sourceMappingURL=services.css.map */

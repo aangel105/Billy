@@ -66,6 +66,10 @@ nav .logo a {
     padding: 5px;
   }
 
+  span {
+    color: darken($accent-color, $amount: 10%);
+  }
+
   p {
     color: $secondary-color;
     font-family: "Ubuntu", sans-serif;
@@ -92,10 +96,17 @@ nav .logo a {
     cursor: pointer;
     letter-spacing: 1px;
   }
+
+  div > button > a {
+    text-decoration: none;
+  }
   .btn-one {
     background-color: darken($accent-color, $amount: 10%);
-    color: lighten($secondary-color, $amount: 80%);
     transition: all, 0.5s, ease-in;
+  }
+
+  .btn-one > a {
+    color: lighten($secondary-color, $amount: 80%);
   }
 
   .btn-one:hover {
@@ -109,6 +120,9 @@ nav .logo a {
 
   .btn-two {
     background-color: $secondary-color;
+  }
+
+  .btn-two > a {
     color: darken($accent-color, $amount: 10%);
   }
 
@@ -118,6 +132,6 @@ nav .logo a {
   }
 
   .btn-two:focus {
-    outline: none;
+    @extend .btn-one:focus;
   }
 }
