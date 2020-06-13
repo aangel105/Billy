@@ -21,7 +21,7 @@ body {
 }
 
 nav .logo a {
-  margin-left: 20px;
+  margin-left: 40px;
   color: darken($accent-color, $amount: 20%);
   text-decoration: none;
   padding: 5px;
@@ -133,5 +133,63 @@ nav .logo a {
 
   .btn-two:focus {
     @extend .btn-one:focus;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $primary-color;
+  }
+
+  .modal-content {
+    background-color: darken($secondary-color, $amount: 50%);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid darken($accent-color, $amount: 30%);
+    width: 80%;
+    height: 80%;
+  }
+
+  .close {
+    color: $primary-color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover {
+      color: darken($accent-color, $amount: 30%);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &:focus {
+      color: $accent-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .modal-content h1 {
+    color: darken($primary-color, $amount: 50%);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .modal-form {
+    width: 50%;
+    height: 40%;
+    background-color: $secondary-color;
   }
 }

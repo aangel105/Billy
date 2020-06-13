@@ -1,48 +1,41 @@
 @import "config";
 @import "style";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 10vh;
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    margin-top: 10vh;
-}
-
-h1{
+  h1 {
     text-align: center;
     font-family: "Ubuntu", sans-serif;
     color: darken($accent-color, $amount: 15%);
     font-size: 30px;
     margin-bottom: 40px;
+  }
 }
 
-article{
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    // background-color: hotpink;
-    width: 100vw;
-    height: 80vh;
+article {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  // background-color: hotpink;
+  width: 100vw;
+  height: 80vh;
 }
 
 article > div {
-    width: 23vw;
-    height: 55vh;
-    background-color: darken($secondary-color, $amount: 30%);
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px 3px darken($accent-color, $amount: 65%);
-}
+  width: 23vw;
+  height: 55vh;
+  background-color: darken($secondary-color, $amount: 30%);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 3px darken($accent-color, $amount: 65%);
 
-.img {
+  .img {
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -51,20 +44,24 @@ article > div {
     align-self: center;
     margin-top: 50px;
     background-position: center;
-}
+  }
 
-.name {
+  .name {
     color: $accent-color;
     font-weight: bolder;
     letter-spacing: 1px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    padding: 5px 5px;
+    font-size: 15px;
+  }
 
-}
-
-p {
+  p {
     text-align: center;
     font-family: "Ubuntu", sans-serif;
     color: darken($primary-color, $amount: 60%);
     font-weight: bolder;
     padding: 5px 5px;
     font-size: 15px;
+  }
 }

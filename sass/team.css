@@ -161,13 +161,6 @@ nav .logo a:hover {
   opacity: 0.9;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   width: 100vw;
   height: 100vh;
@@ -175,7 +168,7 @@ nav .logo a:hover {
   margin-top: 10vh;
 }
 
-h1 {
+.container h1 {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   color: #bcaf04;
@@ -213,7 +206,7 @@ article > div {
           box-shadow: 0px 0px 4px 3px black;
 }
 
-.img {
+article > div .img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -226,13 +219,17 @@ article > div {
   background-position: center;
 }
 
-.name {
+article > div .name {
   color: #faea12;
   font-weight: bolder;
   letter-spacing: 1px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  padding: 5px 5px;
+  font-size: 15px;
 }
 
-p {
+article > div p {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   color: black;

@@ -32,7 +32,7 @@ body {
 }
 
 nav .logo a {
-  margin-left: 20px;
+  margin-left: 40px;
   color: #a39803;
   text-decoration: none;
   padding: 5px;
@@ -152,5 +152,63 @@ nav .logo a:hover {
 .main .btn-two:hover {
   background-color: #858080;
   opacity: 0.9;
+}
+
+.main .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.main .modal-content {
+  background-color: #6b6767;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #716902;
+  width: 80%;
+  height: 80%;
+}
+
+.main .close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.main .close:hover {
+  color: #716902;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main .close:focus {
+  color: #faea12;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main .modal-content h1 {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.main .modal-form {
+  width: 50%;
+  height: 40%;
+  background-color: #e9e8e8;
 }
 /*# sourceMappingURL=style.css.map */
