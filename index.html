@@ -46,23 +46,40 @@
         </button>
       </div>
       <!-- The Modal -->
-<div id="modal" class="modal">
+      <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>Schedule Appointment</h1>
+          <form class="modal-form" action="">
+            <label>Name</label>
+            <input type="text" required autofocus />
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123-45-678"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+              required
+            />
+            <label>Date</label>
+            <input type="date" id="time" name="time" required />
+            <label>Time</label>
+            <input
+              type="time"
+              id="appt"
+              name="appt"
+              min="09:00"
+              max="18:00"
+              required
+            />
+            <button type="submit" class="form-btn">Schedule</button>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h1>Schedule Appointment</h1> 
-    <form class="modal-form">
-    <label>Name</label>
-    <input type="text"/></br>
-    <label>Phone Number</label>
-    <input type="text"/></br>
-    <label>Time</label>
-    <input type="text"/></br>
-    </form>
-  </div>
-
-</div>
+            <small> - We are open from 9 AM to 6 PM - </small>
+          </form>
+        </div>
+      </div>
     </main>
     <script src="app.js"></script>
   </body>

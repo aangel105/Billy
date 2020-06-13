@@ -154,7 +154,7 @@ nav .logo a {
     padding: 20px;
     border: 1px solid darken($accent-color, $amount: 30%);
     width: 80%;
-    height: 80%;
+    height: 98%;
   }
 
   .close {
@@ -188,8 +188,60 @@ nav .logo a {
   }
 
   .modal-form {
-    width: 50%;
-    height: 40%;
+    margin: 0 auto;
+    width: 40%;
+    height: 80%;
     background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 0px 10px 3px darken($accent-color, $amount: 30%);
+    border-radius: 10px;
+
+    label {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 16px;
+      color: darken($primary-color, $amount: 30%);
+      padding: 5px;
+      margin: 5px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"] {
+      width: 60%;
+      height: 30px;
+      border-radius: 15px;
+      font-size: 15px;
+      padding: 14px;
+      font-family: "Ubuntu", sans-serif;
+      text-align: center;
+
+      &:focus,
+      &:hover {
+        outline: none;
+      }
+    }
+
+    .form-btn {
+      @extend input[type="text"];
+      padding: 5px;
+      margin: 30px;
+      cursor: pointer;
+      background-color: $accent-color;
+      box-shadow: 1px 0px 10px 3px $primary-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $accent-color;
+      }
+    }
+    small {
+      font-style: italic;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 11px;
+    }
   }
 }

@@ -173,7 +173,7 @@ nav .logo a:hover {
   padding: 20px;
   border: 1px solid #716902;
   width: 80%;
-  height: 80%;
+  height: 98%;
 }
 
 .main .close {
@@ -207,8 +207,74 @@ nav .logo a:hover {
 }
 
 .main .modal-form {
-  width: 50%;
-  height: 40%;
+  margin: 0 auto;
+  width: 40%;
+  height: 80%;
   background-color: #e9e8e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  -webkit-box-shadow: 1px 0px 10px 3px #716902;
+          box-shadow: 1px 0px 10px 3px #716902;
+  border-radius: 10px;
+}
+
+.main .modal-form label {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.main .modal-form input[type="text"], .main .modal-form .form-btn,
+.main .modal-form input[type="tel"],
+.main .modal-form input[type="date"],
+.main .modal-form input[type="time"] {
+  width: 60%;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 14px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+
+.main .modal-form input[type="text"]:focus, .main .modal-form .form-btn:focus, .main .modal-form input[type="text"]:hover, .main .modal-form .form-btn:hover,
+.main .modal-form input[type="tel"]:focus,
+.main .modal-form input[type="tel"]:hover,
+.main .modal-form input[type="date"]:focus,
+.main .modal-form input[type="date"]:hover,
+.main .modal-form input[type="time"]:focus,
+.main .modal-form input[type="time"]:hover {
+  outline: none;
+}
+
+.main .modal-form .form-btn {
+  padding: 5px;
+  margin: 30px;
+  cursor: pointer;
+  background-color: #faea12;
+  -webkit-box-shadow: 1px 0px 10px 3px black;
+          box-shadow: 1px 0px 10px 3px black;
+}
+
+.main .modal-form .form-btn:hover {
+  background-color: black;
+  color: #faea12;
+}
+
+.main .modal-form small {
+  font-style: italic;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 11px;
 }
 /*# sourceMappingURL=style.css.map */
