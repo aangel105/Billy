@@ -40,7 +40,7 @@ nav .logo a {
 nav .logo a:hover {
   background-color: #a39803;
   border-radius: 50px;
-  color: #000000;
+  color: black;
 }
 
 .links > a {
@@ -56,7 +56,7 @@ nav .logo a:hover {
 .links > a:hover {
   background-color: #a39803;
   border-radius: 50px;
-  color: #000000;
+  color: black;
 }
 
 .main {
@@ -116,7 +116,7 @@ nav .logo a:hover {
 }
 
 .main .btn-one > a {
-  color: #ffffff;
+  color: white;
 }
 
 .main .btn-one:hover {
@@ -151,7 +151,7 @@ nav .logo a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #000000;
+  background-color: black;
 }
 
 .main .modal-content {
@@ -164,7 +164,7 @@ nav .logo a:hover {
 }
 
 .main .close {
-  color: #000000;
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -183,7 +183,7 @@ nav .logo a:hover {
 }
 
 .main .modal-content h1 {
-  color: #000000;
+  color: black;
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -209,7 +209,7 @@ nav .logo a:hover {
 .main .modal-form label {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: #000000;
+  color: black;
   padding: 5px;
   margin: 5px;
 }
@@ -242,11 +242,11 @@ nav .logo a:hover {
   margin: 30px;
   cursor: pointer;
   background-color: #faea12;
-  box-shadow: 1px 0px 10px 3px #000000;
+  box-shadow: 1px 0px 10px 3px black;
 }
 
 .main .modal-form .form-btn:hover {
-  background-color: #000000;
+  background-color: black;
   color: #faea12;
 }
 
@@ -254,4 +254,68 @@ nav .logo a:hover {
   font-style: italic;
   font-family: "Ubuntu", sans-serif;
   font-size: 11px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcaf04;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100vw;
+  height: 80vh;
+}
+
+article > div {
+  width: 23vw;
+  height: 55vh;
+  background-color: #9e9a9a;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 3px black;
+}
+
+article > div .img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid #bcaf04;
+  margin: 10px;
+  align-self: center;
+  margin-top: 50px;
+  background-position: center;
+}
+
+article > div .name {
+  color: #faea12;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  padding: 5px 5px;
+  font-size: 15px;
+}
+
+article > div p {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: black;
+  font-weight: bolder;
+  padding: 5px 5px;
+  font-size: 15px;
 }
