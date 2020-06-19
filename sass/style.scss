@@ -1,4 +1,4 @@
-@import '_config';
+@import "_config";
 
 * {
   margin: 0;
@@ -22,13 +22,13 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   position: fixed;
 }
 
 nav .logo a {
-  margin-left: 10vw ;
+  margin-left: 10vw;
   color: $accent-color;
   text-decoration: none;
   padding: 10px;
@@ -37,7 +37,6 @@ nav .logo a {
   border-radius: 50px;
   letter-spacing: 2px;
   text-transform: uppercase;
-
 
   &:hover {
     background-color: darken($accent-color, $amount: 20%);
@@ -145,19 +144,19 @@ nav .logo a {
   .btn-two:focus {
     @extend .btn-one:focus;
   }
+}
 
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: $primary-color;
-  }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $primary-color;
 
   .modal-content {
     background-color: darken($secondary-color, $amount: 50%);
