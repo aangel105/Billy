@@ -1,62 +1,71 @@
-@import "config";
 @import "style";
-
-h1 {
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  color: darken($accent-color, $amount: 15%);
-  font-size: 30px;
-  margin:10px
-}
 
 .services {
   width: 95vw;
   height: 80vh;
   margin: 0 auto;
-  margin-top: 3vh;
-  display: flex;
-}
+  margin-top: 10vh;
+  display: grid;
+  grid-template-rows: 50px;
 
-.left-side {
-  background-image: url("../images/service.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.9;
-  width: 50%;
-  height: 100%;
+  .services-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: "Ubuntu", sans-serif;
+    color: darken($accent-color, $amount: 15%);
+    font-size: 20px;
+    background-color: $primary-color;
+    grid-column: 1/3;
+    width: 100%;
+  }
+
+  hr {
+    grid-column: 1/3;
+    width: 100%;
+  }
+
+  .left-side {
+    background-image: url("../images/service.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .right-side {
   background-color: darken($primary-color, $amount: 10%);
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
 
-.service {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px;
-  margin: 6px;
-  font-weight: bold;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  color: darken($primary-color, $amount: 5%);
-}
+  .service {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    margin: 6px;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    color: darken($primary-color, $amount: 5%);
+  }
 
-.service > div > p {
-  font-weight: bolder;
-}
+  .service > div > p {
+    font-weight: bolder;
+  }
 
-.service:first-child() {
-  margin-top: 10px;
-}
+  .service:first-child() {
+    margin-top: 10px;
+  }
 
-.service:nth-child(odd) {
-  background-color: darken($accent-color, $amount: 20%);
-}
-.service:nth-child(even) {
-  background-color: darken($secondary-color, $amount: 10%);
+  .service:nth-child(odd) {
+    background-color: darken($accent-color, $amount: 20%);
+  }
+  .service:nth-child(even) {
+    background-color: darken($secondary-color, $amount: 10%);
+  }
 }
