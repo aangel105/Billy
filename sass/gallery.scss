@@ -76,8 +76,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.7;
+  opacity: 0.6;
   position: relative;
+  cursor: pointer;
 }
 
 .one {
@@ -87,15 +88,25 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
-    opacity: 0.6;
   }
 
   .img-p1 {
     position: absolute;
     color: $accent-color;
     font-family: "Ubuntu", sans-serif;
-    z-index: 3;
+    z-index: 2;
     font-size: 1rem;
+    background-color: $primary-color;
+    padding: 6px;
+    border-radius: 5px;
+    animation-name: opacity;
+    animation-duration: 3000ms;
+  }
+  &:hover {
+    .img-p1 {
+      background-color: $accent-color;
+      color: $primary-color;
+    }
   }
 }
 
@@ -106,15 +117,25 @@ body {
     position: absolute;
     color: $accent-color;
     font-family: "Ubuntu", sans-serif;
-    z-index: 3;
+    z-index: 2;
     font-size: 1rem;
+    background-color: $primary-color;
+    padding: 6px;
+    border-radius: 5px;
+    animation-name: opacity;
+    animation-duration: 3000ms;
   }
 
   img {
     width: 100%;
     height: 100%;
     background-size: cover;
-    opacity: 0.6;
+  }
+  &:hover {
+    .img-p2 {
+      background-color: $accent-color;
+      color: $primary-color;
+    }
   }
 }
 
@@ -125,15 +146,25 @@ body {
     position: absolute;
     color: $accent-color;
     font-family: "Ubuntu", sans-serif;
-    z-index: 3;
+    z-index: 2;
     font-size: 1rem;
+    background-color: $primary-color;
+    padding: 6px;
+    border-radius: 5px;
+    animation-name: opacity;
+    animation-duration: 3000ms;
   }
 
   img {
     width: 100%;
     height: 100%;
     background-size: cover;
-    opacity: 0.6;
+  }
+  &:hover {
+    .img-p3 {
+      background-color: $accent-color;
+      color: $primary-color;
+    }
   }
 }
 
@@ -144,14 +175,25 @@ body {
     position: absolute;
     color: $accent-color;
     font-family: "Ubuntu", sans-serif;
-    z-index: 3;
+    z-index: 2;
     font-size: 1rem;
+    background-color: $primary-color;
+    padding: 6px;
+    border-radius: 5px;
+    animation-name: opacity;
+    animation-duration: 3000ms;
   }
 
   img {
     width: 100%;
     height: 100%;
     background-size: cover;
-    opacity: 0.6;
+  }
+
+  &:hover {
+    .img-p4 {
+      background-color: $accent-color;
+      color: $primary-color;
+    }
   }
 }
