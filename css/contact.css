@@ -255,3 +255,107 @@ nav .logo a:hover {
   font-family: "Ubuntu", sans-serif;
   font-size: 11px;
 }
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-top: 7vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/4;
+  letter-spacing: 1px;
+  color: #faea12;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.container .address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/4;
+  letter-spacing: 1px;
+  color: #faea12;
+  font-size: 1.3rem;
+}
+
+.container .address h4 {
+  color: #faea12;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
+
+.container .address p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1rem;
+  color: #e9e8e8;
+  letter-spacing: 2px;
+}
+
+.container .phoneNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/4;
+  letter-spacing: 1px;
+  color: #faea12;
+  font-size: 1.3rem;
+}
+
+.container .phoneNumber h4 {
+  color: #faea12;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
+
+.container .phoneNumber p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1rem;
+  color: #e9e8e8;
+  letter-spacing: 2px;
+}
+
+.container .socialMedia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/4;
+}
+
+.container .socialMedia .fa {
+  font-size: 50px;
+  cursor: pointer;
+  color: #a39803;
+}
+
+.container .socialMedia .fa:hover {
+  color: #b7b4b4;
+}

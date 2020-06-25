@@ -3,13 +3,39 @@ $secondary-color: rgb(233, 232, 232);
 $accent-color: rgb(250, 234, 18);
 
 @mixin heading {
-    text-align: center;
-    font-family: "Ubuntu", sans-serif;
-    color: darken($accent-color, $amount: 15%);
-    font-size: 20px;
-    width: 100%;
-    letter-spacing: 2px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: darken($accent-color, $amount: 20%);
+  font-size: 20px;
+  width: 100%;
+  letter-spacing: 2px;
 }
 
+@mixin contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/4;
+  letter-spacing: 1px;
+  color: $accent-color;
+  font-size: 1.3rem;
+}
 
+@mixin contactHeaders {
+  color: $accent-color;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
 
+@mixin contactParagraph {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1rem;
+  color: $secondary-color;
+  letter-spacing: 2px;
+}
