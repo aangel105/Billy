@@ -1,5 +1,9 @@
 @import "style";
 
+body{
+  overflow: hidden;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -9,7 +13,8 @@
   grid-template-rows: 100px;
 
   h1 {
-    @include heading
+    @include heading;
+    grid-column: 1/3;
   }
 }
 

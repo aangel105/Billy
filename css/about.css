@@ -256,48 +256,59 @@ nav .logo a:hover {
   font-size: 11px;
 }
 
-h1 {
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  color: #bcaf04;
-  font-size: 30px;
-  padding: 10px;
+body {
+  background-image: url("../images/barberia2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+  overflow: hidden;
 }
 
 .about {
   width: 90vw;
   height: 80vh;
-  background-color: #1d1c1c;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 15vh;
   font-family: "Ubuntu", sans-serif;
+  border-radius: 50px;
 }
 
-.about-img {
-  background-image: url("../images/about.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.about h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcaf04;
+  font-size: 20px;
   width: 100%;
-  height: 30vh;
-  border: none;
+  letter-spacing: 2px;
+  padding: 10px;
+  margin: 10px;
 }
 
-.about > p {
-  color: #b7b4b4;
-  padding: 15px;
-  margin: 10px 0px;
-  font-size: 14px;
-  width: 100%;
-  height: 10%;
+.prg-container {
+  width: 60%;
+  height: 70%;
+  border-radius: 50px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
 }
 
-p:nth-child(odd) {
-  background-color: #a39803;
-  color: black;
+.prg-container .prg-one, .prg-container .prg-two {
+  background-color: #faea12;
+  border-radius: 50px;
+  padding: 20px;
+  width: 70%;
+  margin: 10px;
+  box-shadow: 0px 0px 4px 4px #585202, 2px 2px 4px 4px #585202;
 }
 
-p:nth-child(even) {
-  background-color: #9e9a9a;
+.prg-container .prg-two {
+  background-color: #e9e8e8;
   color: black;
 }
