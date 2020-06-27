@@ -1,7 +1,8 @@
-$font-family:"Ubuntu", sans-serif;
+$font-family: "Ubuntu", sans-serif;
 $primary-color: rgb(0, 0, 0);
 $secondary-color: rgb(233, 232, 232);
 $accent-color: rgb(250, 234, 18);
+$darken: darken($accent-color, $amount: 10%);
 
 @mixin heading {
   text-align: center;
@@ -44,19 +45,19 @@ $accent-color: rgb(250, 234, 18);
 // Media Queries Mixins
 
 @mixin mediaSm {
-  @media screen and(max-width: 500px) {
+  @media only screen and (max-width: 500px) {
     @content;
   }
 }
 
 @mixin mediaMd {
-  @media screen and(max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 770px) and (max-width: 1170px) {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
     @content;
   }
 }

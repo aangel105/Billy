@@ -10,7 +10,7 @@ btnOne.addEventListener("click", () => {
 });
 
 closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
+  modal.style.display = "none";
 });
 
 // close modal clicking anywhere outside the modal
@@ -23,11 +23,8 @@ window.addEventListener("click", (e) => {
 
 // Hamburger menu
 
-menu.addEventListener('click', () => {
+menu.addEventListener("click", () => {
   menu.classList.toggle("change");
   navLinks.classList.toggle("change");
   menuBg.classList.toggle("change-bg");
 });
-
-
-

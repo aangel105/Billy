@@ -2,8 +2,7 @@
 @import "_config";
 @import "_modal";
 @import "_utilities";
-@import "_mobile";
-
+// @import "_mobile";
 
 .header {
   width: 100%;
@@ -21,58 +20,192 @@ nav .logo a {
   margin-left: 10vw;
   color: $accent-color;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $font-family;
   border-radius: 50px;
   letter-spacing: 2px;
   text-transform: uppercase;
 
   &:hover {
-    background-color: darken($accent-color, $amount: 20%);
+    background-color: $accent-color;
     border-radius: 50px;
     color: $primary-color;
   }
 }
 
-.hamburger-menu {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Smartphones
+
+@include mediaSm {
+  .hamburger-menu {
+    width: 35px;
+    height: 30px;
+    margin: 50px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .menu {
+    z-index: 2;
+    position: relative;
+  }
+
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: $secondary-color;
+    display: block;
+    border-radius: 5px;
+    // z-index: 2;
+  }
+
+  #bar1 {
+    transform: translateY(-4px);
+  }
+
+  #bar3 {
+    transform: translateY(4px);
+  }
+
+  .change .bar {
+    background-color: $secondary-color;
+  }
+
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .change #bar3 {
+    transform: translateY(-6px) rotate(45deg);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .nav-links {
+    padding: 5px;
+    margin: 0 -15px;
+    transition: 0.3s ease;
+    display: none;
+    position: relative;
+    z-index: 2;
+  }
+  .nav-links li a {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($accent-color, $amount: 20%);
+      border-radius: 50px;
+      color: $primary-color;
+    }
+  }
+  .nav-links li {
+    list-style: none;
+    padding: 16px 0;
+  }
+
+  .change {
+    display: block;
+    z-index: 2;
+  }
+
+  .menu-bg {
+    width: 0;
+    height: 0;
+    margin: 20px;
+    background: radial-gradient(circle, $primary-color, $primary-color);
+    transition: 0.3s ease;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .hamburger-menu #menu-bg {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .change-bg {
+    width: 500px;
+    height: 500px;
+    transform: translate(75%, -20%);
+  }
 }
 
-.nav-links {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+// Table and Small Laptop
+@include mediaMd {
+  .hamburger-menu {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
+
+// Desktops & Laptops
+
+@include mediaLg {
+  .hamburger-menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// widescreens
+
+@include mediaXl {
+  .hamburger-menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .nav-links li {
   list-style: none;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color:$secondary-color;
+  color: $secondary-color;
   font-family: $font-family;
   font-size: 14px;
   letter-spacing: 1px;
-}
-
-.links > a {
-  text-decoration: none;
-  padding: 6px;
-  margin-right: 30px;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 14px;
-  color: $secondary-color;
-  letter-spacing: 1px;
+  padding: 5px;
 
   &:hover {
-    background-color: darken($accent-color, $amount: 20%);
+    background-color: $accent-color;
     border-radius: 50px;
     color: $primary-color;
   }
@@ -87,19 +220,19 @@ nav .logo a {
 
   h1 {
     color: $secondary-color;
-    font-family: "Ubuntu", sans-serif;
+    font-family: $font-family;
     font-size: 40px;
     margin: 5px;
     padding: 5px;
   }
 
   span {
-    color: darken($accent-color, $amount: 10%);
+    color: $accent-color;
   }
 
   p {
     color: $secondary-color;
-    font-family: "Ubuntu", sans-serif;
+    font-family: $font-family;
     font-size: 16px;
   }
 
