@@ -40,7 +40,7 @@ nav .logo a {
 nav .logo a:hover {
   background-color: #a39803;
   border-radius: 50px;
-  color: black;
+  color: #000000;
 }
 
 .links > a {
@@ -56,7 +56,7 @@ nav .logo a:hover {
 .links > a:hover {
   background-color: #a39803;
   border-radius: 50px;
-  color: black;
+  color: #000000;
 }
 
 .main {
@@ -116,7 +116,7 @@ nav .logo a:hover {
 }
 
 .main .btn-one > a {
-  color: white;
+  color: #ffffff;
 }
 
 .main .btn-one:hover {
@@ -151,7 +151,7 @@ nav .logo a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: #000000;
 }
 
 .modal .modal-content {
@@ -164,7 +164,7 @@ nav .logo a:hover {
 }
 
 .modal .close {
-  color: black;
+  color: #000000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -183,7 +183,7 @@ nav .logo a:hover {
 }
 
 .modal .modal-content h1 {
-  color: black;
+  color: #000000;
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -209,7 +209,7 @@ nav .logo a:hover {
 .modal .modal-form label {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: black;
+  color: #000000;
   padding: 5px;
   margin: 5px;
 }
@@ -242,11 +242,11 @@ nav .logo a:hover {
   margin: 30px;
   cursor: pointer;
   background-color: #faea12;
-  box-shadow: 1px 0px 10px 3px black;
+  box-shadow: 1px 0px 10px 3px #000000;
 }
 
 .modal .modal-form .form-btn:hover {
-  background-color: black;
+  background-color: #000000;
   color: #faea12;
 }
 
@@ -254,4 +254,95 @@ nav .logo a:hover {
   font-style: italic;
   font-family: "Ubuntu", sans-serif;
   font-size: 11px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger-menu {
+    width: 35px;
+    height: 30px;
+    margin: 50px;
+    cursor: pointer;
+  }
+  .menu {
+    z-index: 2;
+    position: relative;
+  }
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #e9e8e8;
+    display: block;
+    border-radius: 5px;
+  }
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  #bar3 {
+    transform: translateY(4px);
+  }
+  .change .bar {
+    background-color: #e9e8e8;
+  }
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .change #bar3 {
+    transform: translateY(-6px) rotate(45deg);
+  }
+  .change #bar2 {
+    opacity: 0;
+  }
+  .nav-links {
+    padding: 0;
+    margin: 0 -4px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 2;
+  }
+  .nav-links li a {
+    color: #e9e8e8;
+    text-decoration: none;
+  }
+  .nav-links li a:hover {
+    background-color: #a39803;
+    border-radius: 50px;
+    color: #000000;
+  }
+  .nav-links li {
+    list-style: none;
+    padding: 16px 0;
+  }
+  .change {
+    display: block;
+    z-index: 2;
+  }
+  .menu-bg {
+    width: 0;
+    height: 0;
+    margin: 20px;
+    background: radial-gradient(circle, #000000, #000000);
+    transition: 0.3s ease;
+    z-index: 1;
+    border-radius: 50%;
+  }
+  .hamburger-menu #menu-bg {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+  .change-bg {
+    width: 550px;
+    height: 550px;
+    transform: translate(75%, -20%);
+  }
+  /* Main section */
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main h1 {
+    font-size: 20px;
+  }
 }
