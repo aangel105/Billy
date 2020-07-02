@@ -124,7 +124,7 @@ body {
   background-image: url("../images/barberia.jpeg");
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 100vh;
   opacity: 0.9;
 }
 
@@ -856,6 +856,28 @@ article div p {
     height: 500px;
     transform: translate(75%, -17%);
     border: 1px solid #faea12;
+  }
+  body {
+    background-image: url("../images/Mobile-barberia.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    height: 100vh;
+  }
+  .team-container {
+    margin-top: 10vh;
+  }
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  article div {
+    width: 100%;
+    height: 30vh;
+  }
+  article p {
+    display: none;
   }
   .services-header {
     padding: 10px;
