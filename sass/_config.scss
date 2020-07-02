@@ -6,8 +6,8 @@ $darken: darken($accent-color, $amount: 10%);
 
 @mixin heading {
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  color: darken($accent-color, $amount: 20%);
+  font-family: $font-family;
+  color: $darken;
   font-size: 20px;
   width: 100%;
   letter-spacing: 2px;
@@ -30,13 +30,13 @@ $darken: darken($accent-color, $amount: 10%);
   color: $accent-color;
   text-transform: uppercase;
   font-size: 1.2rem;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $font-family;
   padding: 10px;
   margin: 10px;
 }
 
 @mixin contactParagraph {
-  font-family: "Ubuntu", sans-serif;
+  font-family: $font-family;
   font-size: 1.1rem;
   color: $secondary-color;
   letter-spacing: 2px;

@@ -34,164 +34,6 @@ nav .logo a {
   }
 }
 
-// Smartphones
-
-@include mediaSm {
-  .hamburger-menu {
-    width: 35px;
-    height: 30px;
-    margin: 50px;
-    cursor: pointer;
-    z-index: 3;
-  }
-
-  .menu {
-    z-index: 2;
-    position: relative;
-  }
-
-  .bar {
-    height: 5px;
-    width: 100%;
-    background-color: $secondary-color;
-    display: block;
-    border-radius: 5px;
-    // z-index: 2;
-  }
-
-  #bar1 {
-    transform: translateY(-4px);
-  }
-
-  #bar3 {
-    transform: translateY(4px);
-  }
-
-  .change .bar {
-    background-color: $secondary-color;
-  }
-
-  .change #bar1 {
-    transform: translateY(4px) rotateZ(-45deg);
-  }
-  .change #bar3 {
-    transform: translateY(-6px) rotate(45deg);
-  }
-
-  .change #bar2 {
-    opacity: 0;
-  }
-
-  .nav-links {
-    padding: 5px;
-    margin: 0 -15px;
-    transition: 0.3s ease;
-    display: none;
-    position: relative;
-    z-index: 2;
-  }
-  .nav-links li a {
-    color: $secondary-color;
-    text-decoration: none;
-
-    &:hover {
-      background-color: darken($accent-color, $amount: 20%);
-      border-radius: 50px;
-      color: $primary-color;
-    }
-  }
-  .nav-links li {
-    list-style: none;
-    padding: 16px 0;
-  }
-
-  .change {
-    display: block;
-    z-index: 2;
-  }
-
-  .menu-bg {
-    width: 0;
-    height: 0;
-    margin: 20px;
-    background: radial-gradient(circle, $primary-color, $primary-color);
-    transition: 0.3s ease;
-    z-index: 1;
-    border-radius: 50%;
-  }
-
-  .hamburger-menu #menu-bg {
-    top: 0;
-    right: 0;
-    position: absolute;
-  }
-
-  .change-bg {
-    width: 500px;
-    height: 500px;
-    transform: translate(75%, -20%);
-  }
-}
-
-// Table and Small Laptop
-@include mediaMd {
-  .hamburger-menu {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-// Desktops & Laptops
-
-@include mediaLg {
-  .hamburger-menu {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-// widescreens
-
-@include mediaXl {
-  .hamburger-menu {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .nav-links li {
   list-style: none;
 }
@@ -245,54 +87,64 @@ nav .logo a {
     margin-bottom: 15px;
   }
 
-  div > button {
-    font-family: "Ubuntu", sans-serif;
+  .btn-container {
+    width: 40vw;
+    height: 10vh;
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .btn-container > button {
+    font-family: $font-family;
     font-size: 12px;
     padding: 10px;
-    margin: 18px;
     width: 15vw;
     height: 6vh;
     border-radius: 5px;
     cursor: pointer;
     letter-spacing: 1px;
+
+    a {
+      text-decoration: none;
+    }
   }
 
-  div > button > a {
-    text-decoration: none;
-  }
   .btn-one {
-    background-color: darken($accent-color, $amount: 10%);
+    background-color: $darken;
     transition: all, 0.5s, ease-in;
-  }
+    border: none;
 
-  .btn-one > a {
-    color: lighten($secondary-color, $amount: 80%);
-  }
+    a {
+      color: lighten($secondary-color, $amount: 80%);
+    }
 
-  .btn-one:hover {
-    background-color: darken($accent-color, $amount: 20%);
-    opacity: 0.9;
-  }
-
-  .btn-one:focus {
-    outline: none;
+    &:hover {
+      background-color: darken($darken, $amount: 10%);
+      opacity: 0.9;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 
   .btn-two {
     background-color: $secondary-color;
-  }
+    border: none;
 
-  .btn-two > a {
-    color: darken($accent-color, $amount: 10%);
-  }
+    a {
+      color: darken($accent-color, $amount: 10%);
+    }
+    &:hover {
+      background-color: darken($secondary-color, $amount: 40%);
+      opacity: 0.9;
+    }
 
-  .btn-two:hover {
-    background-color: darken($secondary-color, $amount: 40%);
-    opacity: 0.9;
-  }
-
-  .btn-two:focus {
-    @extend .btn-one:focus;
+    &:focus {
+      @extend .btn-one:focus;
+    }
   }
 }
 
@@ -303,9 +155,8 @@ nav .logo a {
   height: 80vh;
   margin: 0 auto;
   margin-top: 15vh;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $font-family;
   border-radius: 50px;
-  // background-color: red;
 
   h1 {
     @include heading;
@@ -344,26 +195,14 @@ nav .logo a {
 
 // TEAM PAGE
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  margin-top: 15vh;
-  display: grid;
-  grid-template-rows: 100px;
-
-  h1 {
-    @include heading;
-    grid-column: 1/3;
-  }
-}
-
-article {
+.team-container h1 {
+  @include heading;
   grid-column: 1/3;
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
+  justify-content: center;
+  align-self: center;
   width: 100%;
+  padding: 20px;
 }
 
 @keyframes opacity {
@@ -408,15 +247,15 @@ article > div {
     font-weight: bolder;
     letter-spacing: 1px;
     text-align: center;
-    font-family: "Ubuntu", sans-serif;
+    font-family: $font-family;
     padding: 5px 5px;
     font-size: 15px;
   }
 
   p {
     text-align: center;
-    font-family: "Ubuntu", sans-serif;
-    color: darken($secondary-color, $amount: 20%);
+    font-family: $font-family;
+    color: $secondary-color;
     font-weight: bolder;
     padding: 5px 5px;
     font-size: 15px;
@@ -428,40 +267,24 @@ article > div {
 .services {
   width: 95vw;
   height: 80vh;
-  margin: 0 auto;
   margin-top: 10vh;
   display: grid;
   grid-template-rows: 50px;
+}
 
-  .services-header {
-    margin: 0 auto;
-    padding: 10px;
-    grid-column: 1/3;
-    @include heading;
-  }
-
-  hr {
-    grid-column: 1/3;
-    width: 100%;
-  }
-
-  .left-side {
-    background-image: url("../images/service.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
-    width: 100%;
-    height: 100%;
-  }
+.services-header {
+  padding: 10px;
+  grid-column: 1/3;
+  @include heading;
 }
 
 .right-side {
-  background-color: darken($primary-color, $amount: 10%);
+  background-color: $primary-color;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-left: 15vw;
 
   .service {
     display: flex;
@@ -469,9 +292,9 @@ article > div {
     padding: 6px;
     margin: 6px;
     font-weight: bold;
-    font-family: "Ubuntu", sans-serif;
+    font-family: $font-family;
     font-size: 16px;
-    color: darken($primary-color, $amount: 5%);
+    color: $primary-color;
   }
 
   .service > div > p {
@@ -483,10 +306,11 @@ article > div {
   }
 
   .service:nth-child(odd) {
-    background-color: darken($accent-color, $amount: 20%);
+    background-color: $darken;
   }
+
   .service:nth-child(even) {
-    background-color: darken($secondary-color, $amount: 10%);
+    background-color: $secondary-color;
   }
 }
 
@@ -501,7 +325,7 @@ article > div {
   grid-auto-rows: minmax(300px, auto);
 }
 
-@keyframes opacity {
+@keyframes moving {
   0% {
     opacity: 0;
     margin-right: -50vw;
@@ -533,14 +357,14 @@ article > div {
     padding: 10px;
     margin: 10px;
     color: darken($accent-color, $amount: 15%);
-    animation-name: opacity;
+    animation-name: moving;
     animation-duration: 3000ms;
   }
 
   p {
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
-    animation-name: opacity;
+    animation-name: moving;
     animation-duration: 3000ms;
   }
 
@@ -750,5 +574,232 @@ article > div {
         color: darken($secondary-color, $amount: 20%);
       }
     }
+  }
+}
+
+// MEDIA QUERIES
+
+// Smartphones
+
+@include mediaSm {
+  .main p,
+  span {
+    display: none;
+  }
+
+  .main h1 {
+    color: $darken;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+  }
+  .main .btn-container {
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .btn-one,
+    .btn-two {
+      width: 60vw;
+      height: 7vh;
+    }
+  }
+
+  .hamburger-menu {
+    width: 35px;
+    height: 30px;
+    margin: 50px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .menu {
+    z-index: 2;
+    position: relative;
+    margin-top: 7px;
+  }
+
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: $secondary-color;
+    display: block;
+    border-radius: 5px;
+    // z-index: 2;
+  }
+
+  #bar1 {
+    transform: translateY(-4px);
+  }
+
+  #bar3 {
+    transform: translateY(4px);
+  }
+
+  .change .bar {
+    background-color: $secondary-color;
+  }
+
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .change #bar3 {
+    transform: translateY(-6px) rotate(45deg);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .nav-links {
+    padding: 10px;
+    margin: 0 -15px;
+    transition: 0.3s ease;
+    display: none;
+    position: relative;
+    z-index: 2;
+  }
+  .nav-links li a {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($accent-color, $amount: 20%);
+      border-radius: 50px;
+      color: $primary-color;
+    }
+  }
+  .nav-links li {
+    list-style: none;
+    padding: 16px 0;
+  }
+
+  .change {
+    display: block;
+    z-index: 2;
+  }
+
+  .current {
+    background-color: $darken;
+    border-radius: 50px;
+    color: $primary-color;
+  }
+
+  .menu-bg {
+    width: 0;
+    height: 0;
+    margin: 20px;
+    background: radial-gradient(circle, $primary-color, $primary-color);
+    transition: 0.3s ease;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .hamburger-menu #menu-bg {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .change-bg {
+    width: 500px;
+    height: 500px;
+    transform: translate(75%, -17%);
+    border: 1px solid $accent-color;
+  }
+
+  // team
+
+  // services
+
+  .services-header {
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+  }
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100vw;
+  }
+
+  .service {
+    width: 90vw;
+  }
+}
+
+// Table and Small Laptop
+@include mediaMd {
+  .main .btn-container {
+    width: 70vw;
+    // background-color: green;
+
+    .btn-one,
+    .btn-two {
+      width: 25vh;
+       a{
+         font-size: 12px;
+         font-family: $font-family;
+       }
+    }
+  }
+  .hamburger-menu {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Desktops & Laptops
+
+@include mediaLg {
+  .hamburger-menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// widescreens
+
+@include mediaXl {
+  .hamburger-menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 }
