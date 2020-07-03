@@ -274,53 +274,44 @@ article {
 
 // SERVICES PAGE
 
-.services {
-  width: 95vw;
-  height: 80vh;
-  margin-top: 10vh;
-  display: grid;
-  grid-template-rows: 50px;
+.services-container {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .services-header {
-  padding: 10px;
-  grid-column: 1/3;
   @include heading;
+  margin-bottom: 5px;
 }
 
 .right-side {
-  background-color: $primary-color;
-  width: 100%;
-  height: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  margin-left: 15vw;
 
   .service {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 6px;
     margin: 6px;
     font-weight: bold;
     font-family: $font-family;
     font-size: 16px;
     color: $primary-color;
-  }
 
-  .service > div > p {
-    font-weight: bolder;
-  }
-
-  .service:first-child() {
-    margin-top: 10px;
-  }
-
-  .service:nth-child(odd) {
-    background-color: $darken;
-  }
-
-  .service:nth-child(even) {
-    background-color: $secondary-color;
+    &:first-child() {
+      margin-top: 10px;
+    }
+    &:nth-child(odd) {
+      background-color: $darken;
+    }
+    &:nth-child(even) {
+      background-color: $secondary-color;
+    }
   }
 }
 
@@ -592,6 +583,9 @@ article {
 // Smartphones
 
 @include mediaSm {
+
+  // HOME 
+
   .main p,
   span {
     display: none;
@@ -617,6 +611,8 @@ article {
     }
   }
 
+  // HAMBURGER MENU
+
   .hamburger-menu {
     width: 35px;
     height: 30px;
@@ -637,7 +633,6 @@ article {
     background-color: $secondary-color;
     display: block;
     border-radius: 5px;
-    // z-index: 2;
   }
 
   #bar1 {
@@ -720,7 +715,9 @@ article {
     border: 1px solid $accent-color;
   }
 
-  // team
+  // TEAM
+
+
   body {
     overflow: auto;
   }
@@ -738,7 +735,6 @@ article {
     div {
       width: 100%;
       height: 35vh;
-      // background-color: black;
 
       &:last-child {
         display: none;
@@ -750,24 +746,19 @@ article {
     }
   }
 
-  // services
+  // SERVICES
 
-  .services-header {
-    padding: 10px;
+  .services-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-header{
     margin: 10px;
-    width: 50px;
-  }
-  .left-side {
-    display: none;
+    border-bottom: 3px solid $secondary-color;
+    width: 100px;
   }
 
-  .right-side {
-    width: 100vw;
-  }
-
-  .service {
-    width: 90vw;
-  }
+ 
 }
 
 // Table and Small Laptop
