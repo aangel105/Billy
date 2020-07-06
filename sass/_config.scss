@@ -4,6 +4,12 @@ $secondary-color: rgb(233, 232, 232);
 $accent-color: rgb(250, 234, 18);
 $darken: darken($accent-color, $amount: 10%);
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @mixin heading {
   text-align: center;
   font-family: $font-family;
@@ -15,11 +21,24 @@ $darken: darken($accent-color, $amount: 10%);
 
 @mixin flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   font-family: $font-family;
-  color:$secondary-color;
+  color: $secondary-color;
+}
+
+@mixin image-content {
+  color: $accent-color;
+  font-family: $font-family;
+  z-index: 2;
+  font-size: 1rem;
+  background-color: $primary-color;
+  padding: 6px;
+  border-radius: 5px;
+  animation-name: opacity;
+  animation-duration: 3000ms;
 }
 
 @mixin contact {
