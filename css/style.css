@@ -21,9 +21,10 @@
   background-color: #6b6767;
   margin: auto;
   padding: 20px;
-  border: 1px solid #716902;
+  border: 1px solid #d5c604;
+  border-radius: 20px;
   width: 80%;
-  height: 98%;
+  height: 100%;
 }
 
 .modal .close {
@@ -34,7 +35,7 @@
 }
 
 .modal .close:hover {
-  color: #716902;
+  color: #d5c604;
   text-decoration: none;
   cursor: pointer;
 }
@@ -49,7 +50,6 @@
   color: black;
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
-  font-weight: bold;
   padding: 10px;
   margin: 18px;
   letter-spacing: 1px;
@@ -80,7 +80,8 @@
 .modal .modal-form input[type="text"], .modal .modal-form .form-btn,
 .modal .modal-form input[type="tel"],
 .modal .modal-form input[type="date"],
-.modal .modal-form input[type="time"] {
+.modal .modal-form input[type="time"],
+.modal .modal-form select {
   width: 60%;
   height: 30px;
   border-radius: 15px;
@@ -88,6 +89,7 @@
   padding: 14px;
   font-family: "Ubuntu", sans-serif;
   text-align: center;
+  border: none;
 }
 
 .modal .modal-form input[type="text"]:focus, .modal .modal-form .form-btn:focus, .modal .modal-form input[type="text"]:hover, .modal .modal-form .form-btn:hover,
@@ -96,8 +98,11 @@
 .modal .modal-form input[type="date"]:focus,
 .modal .modal-form input[type="date"]:hover,
 .modal .modal-form input[type="time"]:focus,
-.modal .modal-form input[type="time"]:hover {
+.modal .modal-form input[type="time"]:hover,
+.modal .modal-form select:focus,
+.modal .modal-form select:hover {
   outline: none;
+  border: none;
 }
 
 .modal .modal-form .form-btn {
@@ -119,7 +124,7 @@
   font-size: 11px;
 }
 
-body {
+html, body {
   overflow: hidden;
   background-image: url("../images/barberia.jpeg");
   background-repeat: no-repeat;
@@ -145,7 +150,7 @@ nav .logo a {
   color: #faea12;
   text-decoration: none;
   padding: 5px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   border-radius: 50px;
   letter-spacing: 2px;
@@ -269,50 +274,88 @@ nav .logo a:hover {
   opacity: 0.9;
 }
 
-.about {
-  width: 90vw;
-  height: 80vh;
-  margin: 0 auto;
-  margin-top: 15vh;
-  font-family: "Ubuntu", sans-serif;
-  border-radius: 50px;
-}
-
-.about h1 {
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  color: #d5c604;
-  font-size: 20px;
+.about-wrapper {
   width: 100%;
-  letter-spacing: 2px;
-  padding: 10px;
-  margin: 10px;
+  height: 90vh;
+  margin: auto;
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(3, 100px));
+  grid-template-areas: "i c c c" "i c c c" "f f f f";
 }
 
-.prg-container {
-  width: 60%;
-  height: 70%;
-  border-radius: 50px;
-  margin: 20px;
+.content {
+  grid-area: c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  color: #e9e8e8;
+}
+
+.content .about-header h1 {
+  font-size: 4.7rem;
+  color: #e9e8e8;
+  padding: 20px;
+}
+
+.content p {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 20px;
+  color: #faea12;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.image {
+  grid-area: i;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  grid-area: f;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer h1 {
+  color: #e9e8e8;
+  font-family: "Ubuntu", sans-serif;
+  align-self: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.footer .footer-links {
+  margin-top: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer .footer-links div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
 }
 
-.prg-container .prg-one, .prg-container .prg-two {
-  background-color: #faea12;
-  border-radius: 50px;
-  padding: 20px;
-  width: 70%;
-  margin: 10px;
-  box-shadow: 0px 0px 4px 4px #585202, 2px 2px 4px 4px #585202;
+.footer .footer-links i {
+  font-size: 40px;
+  color: #faea12;
 }
 
-.prg-container .prg-two {
-  background-color: #e9e8e8;
-  color: black;
+.footer .footer-links p {
+  font-family: "Ubuntu", sans-serif;
+  color: #e9e8e8;
+  font-size: 14px;
+  padding: 5px;
 }
 
 .team-container {
@@ -849,6 +892,31 @@ article div p {
     height: 500px;
     transform: translate(75%, -17%);
     border: 1px solid #faea12;
+  }
+  .about-wrapper {
+    display: grid;
+    grid-template-areas: "c c c c" "i i i i" "f f f f";
+  }
+  .content {
+    grid-area: c;
+  }
+  .content .about-header h1 {
+    padding: 20px;
+    font-size: 2.2rem;
+  }
+  .content p {
+    background-color: black;
+  }
+  .image {
+    grid-area: i;
+  }
+  .image img {
+    opacity: 1;
+  }
+  .footer {
+    grid-area: f;
+    background-color: black;
+    padding: 30px;
   }
   body {
     overflow: auto;

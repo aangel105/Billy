@@ -9,6 +9,13 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Billy Boy Barbershop</title>
+
+    <style>
+      .p-one {
+        color: #fff;
+        font-size: 30px;
+      }
+    </style>
   </head>
   <body>
     <!-- homepage header -->
@@ -69,18 +76,31 @@
           <h1>Schedule Appointment</h1>
           <form class="modal-form" action="contact.html" method="GET">
             <label>Name</label>
-            <input type="text" required autofocus />
+
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              class="name"
+              required
+              autofocus
+            />
             <label>Phone Number</label>
             <input
               type="tel"
               id="phone"
               name="phone"
-              placeholder="phone number"
+              placeholder="no dash"
               pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
               required
             />
             <label>Date</label>
-            <input type="date" id="time" name="time" required />
+            <input
+              type="date"
+              id="time"
+              name="time"
+              min="2020-07-03"
+              required
+            />
             <label>Time</label>
             <input
               type="time"
@@ -88,14 +108,24 @@
               name="appt"
               min="09:00"
               max="18:00"
+              placeholder="09 AM to 6PM"
               required
             />
+
+            <label for="">Barber</label>
+            <select>
+              <option>Select</option>
+              <option value="">Billy</option>
+              <option value="">Joel</option>
+              <option value="">Carlos</option>
+            </select>
             <button type="submit" class="form-btn">Schedule</button>
 
             <small> - We are open from 9 AM to 6 PM - </small>
           </form>
         </div>
       </div>
+      <p class="p-one"></p>
     </main>
     <script src="app.js"></script>
   </body>
