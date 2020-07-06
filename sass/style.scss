@@ -618,6 +618,21 @@ article {
     }
   }
 
+  // Modal 
+
+  .modal-content .modal-form {
+    width: 100%;
+    height: 80%;
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select {
+    width: 100%;
+    }
+  }
+
   // HAMBURGER MENU
 
   .hamburger-menu {

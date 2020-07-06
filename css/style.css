@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -58,7 +64,7 @@
 
 .modal .modal-form {
   margin: 0 auto;
-  width: 40%;
+  width: 50%;
   height: 80%;
   background-color: #e9e8e8;
   display: flex;
@@ -857,6 +863,17 @@ article div p {
     width: 60vw;
     height: 7vh;
   }
+  .modal-content .modal-form {
+    width: 100%;
+    height: 80%;
+  }
+  .modal-content .modal-form input[type="text"], .modal-content .modal .modal-form .form-btn, .modal .modal-content .modal-form .form-btn,
+  .modal-content .modal-form input[type="tel"],
+  .modal-content .modal-form input[type="date"],
+  .modal-content .modal-form input[type="time"],
+  .modal-content .modal-form select {
+    width: 100%;
+  }
   .hamburger-menu {
     width: 35px;
     height: 30px;
@@ -1016,10 +1033,6 @@ article div p {
     100% {
       opacity: 1;
     }
-  }
-  .image-five {
-    border: 1px solid red;
-    padding-bottom: 5p;
   }
   .services-container {
     display: flex;
