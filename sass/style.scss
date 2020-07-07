@@ -586,6 +586,61 @@ article {
   }
 }
 
+// Appointment
+
+.appointment-container {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10vh;
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 5px;
+  grid-template-areas:
+    "h h h"
+    "c c c"
+    "b b b";
+}
+
+.appt-header {
+  grid-area: h;
+  width: 100%;
+  background-color: $primary-color;
+  @include flex;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.appt-content {
+  grid-area: c;
+  width: 100%;
+  @include flex;
+  background-color: $primary-color;
+  font-size: 1.5rem;
+}
+
+.home {
+  grid-area: b;
+  width: 100%;
+  @include flex;
+  cursor: pointer;
+  background-color: $primary-color;
+
+  li {
+    @include flex;
+    width: 70%;
+    height: 50px;
+    box-shadow: 2px 0px 10px $secondary-color;
+    border-radius: 10px;
+    list-style: none;
+
+    a {
+    color: $accent-color;
+    text-decoration: none;
+    }
+  }
+}
+
 // MEDIA QUERIES
 
 // Smartphones
@@ -618,7 +673,7 @@ article {
     }
   }
 
-  // Modal 
+  // Modal
 
   .modal-content .modal-form {
     width: 100%;
@@ -629,7 +684,7 @@ article {
     input[type="date"],
     input[type="time"],
     select {
-    width: 100%;
+      width: 100%;
     }
   }
 
@@ -706,12 +761,6 @@ article {
   .change {
     display: block;
     z-index: 2;
-  }
-
-  .current {
-    background-color: $darken;
-    border-radius: 50px;
-    color: $primary-color;
   }
 
   .menu-bg {

@@ -8,14 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Billy Boy Barbershop</title>
-
-    <style>
-      .p-one {
-        color: #fff;
-        font-size: 30px;
-      }
-    </style>
+    <title>>Billy Boy Barbershop</title>
   </head>
   <body>
     <!-- homepage header -->
@@ -74,11 +67,12 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <h1>Schedule Appointment</h1>
-          <form class="modal-form" action="contact.html" method="GET">
+          <form class="modal-form" action="./appointment.html" method="GET">
             <label>Name</label>
 
             <input
               type="text"
+              name="name"
               placeholder="Enter Your Name"
               class="name"
               required
@@ -87,7 +81,7 @@
             <label>Phone Number</label>
             <input
               type="tel"
-              id="phone"
+              class="phone"
               name="phone"
               placeholder="no dash"
               pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
@@ -96,7 +90,7 @@
             <label>Date</label>
             <input
               type="date"
-              id="time"
+              class="time"
               name="time"
               min="2020-07-03"
               required
@@ -104,7 +98,7 @@
             <label>Time</label>
             <input
               type="time"
-              id="appt"
+              class="appointment"
               name="appt"
               min="09:00"
               max="18:00"
@@ -112,20 +106,12 @@
               required
             />
 
-            <label for="">Barber</label>
-            <select>
-              <option>Select</option>
-              <option value="">Billy</option>
-              <option value="">Joel</option>
-              <option value="">Carlos</option>
-            </select>
             <button type="submit" class="form-btn">Schedule</button>
 
             <small> - We are open from 9 AM to 6 PM - </small>
           </form>
         </div>
       </div>
-      <p class="p-one"></p>
     </main>
     <script src="app.js"></script>
   </body>

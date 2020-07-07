@@ -6,31 +6,36 @@ const navLinks = document.querySelector(".nav-links");
 const links = document.querySelector("li a");
 const menuBg = document.querySelector(".menu-bg");
 const formBtn = document.querySelector(".form-btn");
-const name = document.querySelector(".name");
-const p0ne = document.querySelector(".p-one");
+const nameOne = document.querySelector("#name");
+const modalForm = document.querySelector(".modal-form");
 
 document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu
 
-  menu.addEventListener("click", () => {
-    console.log("btn-clicked");
-    menu.classList.toggle("change");
-    navLinks.classList.toggle("change");
-    links.classList.toggle("current");
-    menuBg.classList.toggle("change-bg");
-  });
+  if (menu) {
+    menu.addEventListener("click", () => {
+      console.log("btn-clicked");
+      menu.classList.toggle("change");
+      navLinks.classList.toggle("change");
+      menuBg.classList.toggle("change-bg");
+    });
+  }
 
-  btnOne.addEventListener("click", () => {
-    modal.style.display = "block";
-  });
+  if (btnOne) {
+    btnOne.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+  }
 
   // Modal
 
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  if (closeModal) {
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
 
-  // // close modal clicking anywhere outside the modal
+  // close modal clicking anywhere outside the modal
 
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
@@ -39,9 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Modal Submitted form
-
-  formBtn.addEventListener("click", () => {
-    let x = name.value;
-    alert(`Hello, ${x}\n\nThank you for booking an appointment at Billy Boy on june 20 2020 at 2:00 PM`);
-  });
+  if (formBtn) {
+    formBtn.addEventListener("click", (e) => {
+      console.log("form was submitted!!");
+      // modalForm.reset();
+    });
+  }
 });
