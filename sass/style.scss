@@ -43,11 +43,15 @@ nav .logo a {
     font-size: 14px;
     letter-spacing: 1px;
     padding: 5px;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: background-color 1000ms;
 
     &:hover {
       background-color: $accent-color;
       border-radius: 50px;
       color: $primary-color;
+      transition-timing-function: ease-in;
     }
   }
 }
@@ -68,7 +72,9 @@ nav .logo a {
   }
 
   span {
-    color: $accent-color;
+    color: $darken;
+    border-radius: 10px;
+    padding: 5px;
   }
 
   p {
@@ -89,7 +95,6 @@ nav .logo a {
   .btn-container {
     width: 40vw;
     height: 10vh;
-    // background-color: red;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -113,7 +118,7 @@ nav .logo a {
 
   .btn-one {
     background-color: $darken;
-    transition: all, 0.5s, ease-in;
+    transition: background-color 1000ms;
     border: none;
 
     a {
@@ -123,6 +128,7 @@ nav .logo a {
     &:hover {
       background-color: darken($darken, $amount: 10%);
       opacity: 0.9;
+      transition-timing-function: ease-in-out;
     }
     &:focus {
       outline: none;
@@ -130,15 +136,17 @@ nav .logo a {
   }
 
   .btn-two {
-    background-color: $secondary-color;
+    background-color: darken($secondary-color, $amount: 30%);
+    transition: background-color 1000ms;
     border: none;
 
     a {
       color: darken($accent-color, $amount: 10%);
     }
     &:hover {
-      background-color: darken($secondary-color, $amount: 40%);
+      background-color: $secondary-color;
       opacity: 0.9;
+      transition-timing-function: ease-in-out;
     }
 
     &:focus {
@@ -522,26 +530,21 @@ article {
 // CONTACT
 
 .contact-container {
-  width: 80%;
+  width: 50%;
   height: 80%;
   margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid $accent-color;
-  margin-top: 16vh;
+  border-radius: 10px;
+  margin-top: 15vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: $primary-color;
-
-  .header {
-    @include contact;
-    position: relative;
-
-    h2 {
-      border-bottom: 2px solid $secondary-color;
-    }
-  }
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-template-areas:
+    "a a a"
+    "p p p"
+    "f f f";
 
   .address {
+    grid-area: a;
     @include contact;
 
     h4 {
@@ -554,8 +557,8 @@ article {
   }
 
   .phoneNumber {
+    grid-area: p;
     @include contact;
-    background-color: $primary-color;
 
     h4 {
       @include contactHeaders;
@@ -567,20 +570,22 @@ article {
   }
 
   .socialMedia {
+    background-color: $primary-color;
+    grid-area: f;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    grid-column: 1/4;
+    margin-bottom: 10px;
 
     .fa {
       font-size: 50px;
       cursor: pointer;
-      color: darken($accent-color, $amount: 20%);
+      color: $secondary-color;
 
       &:hover {
-        color: darken($secondary-color, $amount: 20%);
+        color: $darken;
       }
     }
   }
@@ -589,12 +594,13 @@ article {
 // Appointment
 
 .appointment-container {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
+  margin: 0 auto;
   margin-top: 10vh;
+  height: 90%;
+  width: 70%;
+  padding: 20px;
   display: grid;
-  grid-template-rows: repeat(3, 200px);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 5px;
   grid-template-areas:
     "h h h"
@@ -628,15 +634,21 @@ article {
 
   li {
     @include flex;
-    width: 70%;
+    width: 45%;
     height: 50px;
     box-shadow: 2px 0px 10px $secondary-color;
     border-radius: 10px;
     list-style: none;
 
     a {
-    color: $accent-color;
-    text-decoration: none;
+      color: $darken;
+      text-decoration: none;
+      font-family: $font-family;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      background-color: darken($secondary-color, $amount: 30%);
     }
   }
 }
@@ -675,9 +687,17 @@ article {
 
   // Modal
 
+  .modal .modal-content {
+    // background-color: red;
+    height: 100%;
+    width: 90vw;
+    border-radius: 0px;
+    padding: 10px;
+  }
+
   .modal-content .modal-form {
     width: 100%;
-    height: 80%;
+    height: 70%;
 
     input[type="text"],
     input[type="tel"],
@@ -685,6 +705,25 @@ article {
     input[type="time"],
     select {
       width: 100%;
+    }
+
+    .close {
+      color: $primary-color;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+
+      &:hover {
+        color: $darken;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      &:focus {
+        color: $accent-color;
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
   }
 
@@ -855,10 +894,6 @@ article {
 
   // Gallery
 
-  body {
-    overflow: auto;
-  }
-
   .gallery-container {
     display: grid;
     grid-template-rows: repeat(6, minmax(200px, 1fr));
@@ -903,6 +938,22 @@ article {
     margin: 10px;
     border-bottom: 3px solid $secondary-color;
     width: 100px;
+  }
+
+  // Contact
+
+  .contact-container {
+    width: 90%;
+  }
+
+  // appointment 
+
+  .appointment-container{
+    width: 100%;
+
+    .home li {
+      width: 70%;
+    }
   }
 }
 

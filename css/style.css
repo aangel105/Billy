@@ -136,7 +136,6 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  opacity: 0.9;
 }
 
 .header {
@@ -180,12 +179,16 @@ nav .logo a:hover {
   font-size: 14px;
   letter-spacing: 1px;
   padding: 5px;
+  background-color: transparent;
+  border-radius: 50px;
+  transition: background-color 1000ms;
 }
 
 .nav-links li a:hover {
   background-color: #faea12;
   border-radius: 50px;
   color: black;
+  transition-timing-function: ease-in;
 }
 
 .main {
@@ -205,7 +208,9 @@ nav .logo a:hover {
 }
 
 .main span {
-  color: #faea12;
+  color: #d5c604;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .main p {
@@ -249,7 +254,7 @@ nav .logo a:hover {
 
 .main .btn-one {
   background-color: #d5c604;
-  transition: all, 0.5s, ease-in;
+  transition: background-color 1000ms;
   border: none;
 }
 
@@ -260,6 +265,7 @@ nav .logo a:hover {
 .main .btn-one:hover {
   background-color: #a39803;
   opacity: 0.9;
+  transition-timing-function: ease-in-out;
 }
 
 .main .btn-one:focus, .main .btn-two:focus {
@@ -267,7 +273,8 @@ nav .logo a:hover {
 }
 
 .main .btn-two {
-  background-color: #e9e8e8;
+  background-color: #9e9a9a;
+  transition: background-color 1000ms;
   border: none;
 }
 
@@ -276,8 +283,9 @@ nav .logo a:hover {
 }
 
 .main .btn-two:hover {
-  background-color: #858080;
+  background-color: #e9e8e8;
   opacity: 0.9;
+  transition-timing-function: ease-in-out;
 }
 
 .about-wrapper {
@@ -733,51 +741,34 @@ article div p {
 }
 
 .contact-container {
-  width: 80%;
+  width: 50%;
   height: 80%;
   margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid #faea12;
-  margin-top: 16vh;
+  border-radius: 10px;
+  margin-top: 15vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: black;
-}
-
-.contact-container .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  grid-column: 1/4;
-  letter-spacing: 1px;
-  color: #faea12;
-  font-size: 1.3rem;
-  position: relative;
-}
-
-.contact-container .header h2 {
-  border-bottom: 2px solid #e9e8e8;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-template-areas: "a a a" "p p p" "f f f";
 }
 
 .contact-container .address {
+  grid-area: a;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  grid-column: 1/4;
   letter-spacing: 1px;
-  color: #faea12;
+  color: #e9e8e8;
   font-size: 1.3rem;
+  font-family: "Ubuntu", sans-serif;
+  background-color: black;
 }
 
 .contact-container .address h4 {
-  color: #faea12;
-  text-transform: uppercase;
+  color: #e9e8e8;
   font-size: 1.2rem;
   font-family: "Ubuntu", sans-serif;
   padding: 10px;
@@ -792,22 +783,22 @@ article div p {
 }
 
 .contact-container .phoneNumber {
+  grid-area: p;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  grid-column: 1/4;
   letter-spacing: 1px;
-  color: #faea12;
+  color: #e9e8e8;
   font-size: 1.3rem;
+  font-family: "Ubuntu", sans-serif;
   background-color: black;
 }
 
 .contact-container .phoneNumber h4 {
-  color: #faea12;
-  text-transform: uppercase;
+  color: #e9e8e8;
   font-size: 1.2rem;
   font-family: "Ubuntu", sans-serif;
   padding: 10px;
@@ -822,31 +813,34 @@ article div p {
 }
 
 .contact-container .socialMedia {
+  background-color: black;
+  grid-area: f;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  grid-column: 1/4;
+  margin-bottom: 10px;
 }
 
 .contact-container .socialMedia .fa {
   font-size: 50px;
   cursor: pointer;
-  color: #a39803;
+  color: #e9e8e8;
 }
 
 .contact-container .socialMedia .fa:hover {
-  color: #b7b4b4;
+  color: #d5c604;
 }
 
 .appointment-container {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
+  margin: 0 auto;
   margin-top: 10vh;
+  height: 90%;
+  width: 70%;
+  padding: 20px;
   display: grid;
-  grid-template-rows: repeat(3, 200px);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 5px;
   grid-template-areas: "h h h" "c c c" "b b b";
 }
@@ -902,7 +896,7 @@ article div p {
   font-size: 2rem;
   font-family: "Ubuntu", sans-serif;
   color: #e9e8e8;
-  width: 70%;
+  width: 45%;
   height: 50px;
   box-shadow: 2px 0px 10px #e9e8e8;
   border-radius: 10px;
@@ -910,8 +904,14 @@ article div p {
 }
 
 .home li a {
-  color: #faea12;
+  color: #d5c604;
   text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+}
+
+.home li:hover {
+  background-color: #9e9a9a;
 }
 
 @media only screen and (max-width: 500px) {
@@ -937,9 +937,15 @@ article div p {
     width: 60vw;
     height: 7vh;
   }
+  .modal .modal-content {
+    height: 100%;
+    width: 90vw;
+    border-radius: 0px;
+    padding: 10px;
+  }
   .modal-content .modal-form {
     width: 100%;
-    height: 80%;
+    height: 70%;
   }
   .modal-content .modal-form input[type="text"], .modal-content .modal .modal-form .form-btn, .modal .modal-content .modal-form .form-btn,
   .modal-content .modal-form input[type="tel"],
@@ -947,6 +953,22 @@ article div p {
   .modal-content .modal-form input[type="time"],
   .modal-content .modal-form select {
     width: 100%;
+  }
+  .modal-content .modal-form .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .modal-content .modal-form .close:hover {
+    color: #d5c604;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-content .modal-form .close:focus {
+    color: #faea12;
+    text-decoration: none;
+    cursor: pointer;
   }
   .hamburger-menu {
     width: 35px;
@@ -1077,9 +1099,6 @@ article div p {
   article p {
     display: none;
   }
-  body {
-    overflow: auto;
-  }
   .gallery-container {
     display: grid;
     grid-template-rows: repeat(6, minmax(200px, 1fr));
@@ -1111,6 +1130,15 @@ article div p {
     margin: 10px;
     border-bottom: 3px solid #e9e8e8;
     width: 100px;
+  }
+  .contact-container {
+    width: 90%;
+  }
+  .appointment-container {
+    width: 100%;
+  }
+  .appointment-container .home li {
+    width: 70%;
   }
 }
 
